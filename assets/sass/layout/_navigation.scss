@@ -1,0 +1,93 @@
+nav ul,
+.menu {
+    list-style: none;
+    padding: 0;
+}
+
+.main-nav {
+    color: gray;
+
+    // @include until($small-tablet) {
+    //     -webkit-overflow-scrolling: touch;
+    //     background: white;
+    //     color: black;
+    //     height: 100%;
+    //     left: 0;
+    //     opacity: 0;
+    //     overflow-y: auto;
+    //     padding: #{$mobile-header-height} 0;
+    //     position: fixed;
+    //     right: 0;
+    //     top: 0;
+    //     transition: opacity 350ms ease, visibility 350ms ease;
+    //     visibility: hidden;
+    //     width: 100%;
+    //     z-index: 100;
+
+    //     .is-open-menu & {
+    //         opacity: 1;
+    //         visibility: visible;
+    //     }
+
+    //     &.is-active {
+    //         height: 100%;
+    //     }
+    // }
+
+    .menu {
+        display: flex;
+        flex-flow: row wrap;
+        list-style: none;
+        margin: 0 -15px;
+        padding: 0;
+
+
+
+        .menu-item {
+            margin: 0 15px;
+            text-transform: uppercase;
+
+            @include until($small-tablet) {
+                margin: 20px 0;
+            }
+
+            a {
+                font-size: 18px;
+                font-weight: 400;
+                color: $text-color;
+                position: relative;
+
+                &:hover {
+                    color:$text-color;
+                    &:before{
+                        content: "...";
+                        position: absolute;
+                        bottom: -10px;
+                        letter-spacing: 5px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                    }
+                }
+                &:active{
+                    color: $text-color;
+                    &:before{
+                        content: "...";
+                        position: absolute;
+                        bottom: -10px;
+                        letter-spacing: 5px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                    }
+                }
+            }
+        }
+    }
+
+    .sub-menu {
+        display: none;
+    }
+
+    .open-submenu > .sub-menu {
+        display: block;
+    }
+}

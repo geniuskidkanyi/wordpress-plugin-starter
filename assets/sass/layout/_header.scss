@@ -1,0 +1,81 @@
+.is-noscroll {
+    pointer-events: none;
+    height: 100%;
+    overflow: hidden;
+
+    .header,
+    .main-nav,
+    .top {
+        pointer-events: auto;
+    }
+}
+
+.header {
+    min-height: $desktop-header-height;
+    background-color: $brand-color;
+    
+    position: relative;
+    z-index: 200;
+
+    @include until($small-tablet) {
+        min-height: $mobile-header-height;
+    }
+
+    img {
+        display: block;
+    }
+
+    .menu-wrapper{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        background-color: $brand-color;
+        // padding: 15px 0;
+        .main-nav{
+            
+            @include until($tablet){
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    
+                    background-color: white;
+                    padding: 20px;
+                    text-align: center;
+                    opacity: 0;
+                    visibility: hidden;
+                    z-index: -10;
+                    top: -1000%;
+                    transition: all 300ms ease-in-out;
+            }
+            .menu{
+                @include until($tablet){
+                        flex-direction: column;
+                         align-items: center;
+                         a{
+                            color: $brand-color;
+                         }
+                }
+            }
+            &.is-active{
+                @include until($tablet){
+                        opacity: 1;
+                        visibility: visible;
+                        top: 100%;
+                }
+            }
+        }
+    }
+    .btn{
+        background-color: red;
+        border-radius: 16px;
+        @include until($tablet){
+            margin-right: 50px;
+        }
+    }
+
+    a.hover{
+        background-color: rgb(255, 140, 0);
+    
+    }
+}

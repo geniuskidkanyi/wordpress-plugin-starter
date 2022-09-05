@@ -1,0 +1,71 @@
+@font-face {
+    font-family: "ThemeIcons";
+    src: url("../fonts/ThemeIcons.eot?882d7a1fa2062a471cae01b669bdd541?#iefix") format("embedded-opentype"),
+url("../fonts/ThemeIcons.woff2?882d7a1fa2062a471cae01b669bdd541") format("woff2"),
+url("../fonts/ThemeIcons.woff?882d7a1fa2062a471cae01b669bdd541") format("woff"),
+url("../fonts/ThemeIcons.ttf?882d7a1fa2062a471cae01b669bdd541") format("truetype"),
+url("../fonts/ThemeIcons.svg?882d7a1fa2062a471cae01b669bdd541#ThemeIcons") format("svg");
+}
+
+ [class^="icon-"]:before,  [class*=" icon-"]:before {
+    font-family: ThemeIcons !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-app-developer:before {
+    content: "\f101";
+}
+.icon-businessman:before {
+    content: "\f102";
+}
+.icon-computer:before {
+    content: "\f103";
+}
+.icon-correct:before {
+    content: "\f104";
+}
+.icon-email:before {
+    content: "\f105";
+}
+.icon-facebook:before {
+    content: "\f106";
+}
+.icon-instagram:before {
+    content: "\f107";
+}
+.icon-linkedin:before {
+    content: "\f108";
+}
+.icon-location:before {
+    content: "\f109";
+}
+.icon-mobile-app:before {
+    content: "\f10a";
+}
+.icon-phone-call:before {
+    content: "\f10b";
+}
+.icon-send-message:before {
+    content: "\f10c";
+}
+.icon-stars:before {
+    content: "\f10d";
+}
+.icon-twitter:before {
+    content: "\f10e";
+}
+.icon-web-design:before {
+    content: "\f10f";
+}
+.icon-website:before {
+    content: "\f110";
+}
+.icon-youtube:before {
+    content: "\f111";
+}

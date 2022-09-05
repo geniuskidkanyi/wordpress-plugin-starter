@@ -1,0 +1,327 @@
+.section {
+    padding: 10px 0;
+
+    img {
+
+        width: 100%;
+    }
+
+    .divider {
+        height: 2px;
+        background-color: black;
+        width: 100%;
+        margin-top: 50px;
+        opacity: 0.2;
+    }
+
+    .section-title-wrapper {
+        .section-subtitle {
+            span {
+                color: $brand-color-alt;
+            }
+        }
+
+        .grid {
+            .items-grid {
+                display: flex;
+            }
+        }
+    }
+
+    &.hero {
+        .section-title {
+            font-weight: 700;
+            font-size: 64px;
+        }
+    }
+
+    .section-intro {
+        margin-top: 25px;
+    }
+
+    .content {
+        margin-bottom: 25px;
+    }
+
+    .section-social-icons {
+        padding-bottom: 25px;
+        padding-top: 25px;
+
+        .social-items {
+            list-style-type: none;
+            display: flex;
+            padding-left: 0px;
+
+            li {
+                margin: 0 5px;
+
+                .icon-socials {
+                    height: 40px;
+                    width: 40px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: white;
+                    background-color: black;
+                    padding: 10px;
+
+                }
+            }
+        }
+    }
+
+    &.king {
+
+        padding-bottom: 35px;
+
+        .section-title {
+            font-weight: 700;
+            font-size: 44px;
+        }
+
+        .items {
+            padding: 25px;
+            border-radius: 10px;
+            background-color: #2f2f32;
+        }
+
+    }
+
+    &.queen {
+        .title {
+            justify-content: center;
+        }
+
+        .section-subtitle,
+        .section-title {
+            text-align: center;
+        }
+
+        .view-btn {
+            text-align: center;
+
+            button {
+                background-color: black;
+                border-radius: 5px;
+
+                span{
+                    padding: 5px;
+                }
+            }
+        }
+
+
+    }
+
+    &.resume {
+        padding-top: 55px;
+
+        .title {
+            justify-content: center;
+        }
+
+        .section-subtitle,
+        .section-title {
+            text-align: center;
+        }
+
+        .items {
+            padding: 25px;
+            border-radius: 10px;
+            background-color: #2f2f32;
+            box-shadow: 0 14px 28px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.22);
+        }
+
+        .grid-title-wrapper {
+            .section-subtitle {
+                text-align: left;
+                color: red;
+                font-size: smaller;
+            }
+
+        }
+
+        .wrapper {
+            .title {
+                font-size: x-large;
+            }
+
+            .subtitle {
+                color: grey;
+                font-size: smaller;
+            }
+
+            .content {
+                font-size: smaller;
+            }
+        }
+        .vertical-decoration{
+            position: relative;
+            @include until($tablet){
+                margin: 0, 20px;
+            }
+            &::before{
+                content: "";
+                top: 20px;
+                bottom: 20px;
+                left: -20px;
+                width: 3px;
+                background-color: $deoration-color;
+                position: absolute;
+            }
+        }
+        .horizontal-decoration{
+            position: relative;
+            &::before{
+                position: absolute;
+                content: "";
+                width: 20px;
+                height: 3px;
+                top: 40px;
+                left: -20px;
+                background-color: $deoration-color;
+            }
+            &::after{
+                position: absolute;
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                background-color: $deoration-color;
+                content: "";
+                left: -19px;
+                top: 41px;
+                transform: translate3d(-50%, -50%, 0);
+            }
+        }
+    }
+
+    &.client {
+        padding-bottom: 35px;
+
+        .icons {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .items {
+            padding: 25px;
+            border-radius: 10px;
+            background-color: #2f2f32;
+        }
+
+        .foot {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            img {
+                border-radius: 30px;
+            }
+        }
+    }
+
+    &.selected-clients {
+        padding-top: 35px;
+
+        .title {
+            justify-content: center;
+        }
+
+        .section-subtitle,
+        .section-title {
+            text-align: center;
+        }
+
+        .content {
+            padding: 25px;
+            border-radius: 10px;
+            background-color: #2f2f32;
+            box-shadow: 0 14px 28px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.22);
+        }
+    }
+
+    &.contact {
+        padding-top: 35px;
+
+        .title {
+            justify-content: center;
+        }
+
+        .section-subtitle,
+        .section-title {
+            text-align: center;
+        }
+
+        .content-wrapper {
+            margin-top: 25px;
+            margin-bottom: 25px;
+            padding: 25px;
+            // margin-left: auto;
+            // margin-right: auto;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            border-radius: 10px;
+            background-color: #2f2f32;
+            box-shadow: 0 14px 28px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.22);
+
+            .grid {
+                margin: auto;
+                justify-content: center;
+            }
+
+            input {
+                border: 1px solid $deoration-color;
+                border-radius: 5px;
+                height: 40px;
+                text-align: center;
+            }
+
+            .view-btn {
+                button {
+                    background-color: $deoration-color;
+                    border-radius: 5px;
+                    width: 250px;
+                    #send-message{
+                        color: white;
+                    }
+                }
+            }
+
+
+        }
+    }
+
+    &.last-section {
+        text-align: center;
+
+        .icon-wrapper {
+            display: flex;
+            justify-content: center;
+
+            .social-items {
+                list-style-type: none;
+                display: flex;
+
+                li {
+                    margin: 10px;
+
+                    height: 40px;
+                    width: 40px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: white;
+                    background-color: black;
+                    padding: 10px;
+
+                }
+            }
+
+        }
+    }
+
+    span{
+        color: red;
+    }
+}
